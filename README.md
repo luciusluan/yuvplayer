@@ -35,3 +35,8 @@ Hot key
 * "s" set size to 720p(SD)
 * "c" set size to CIF
 * "q" set size to QCIF
+  
+Command Line
+* "-s": size, example: 128x128
+* "-z": zoom, one of: 4:1, 2:1, 1:1, 1:2, 1:4
+* "-c": color, one of: YUV420_10BE, YUV420_10LE, YUV444, YUV422, YUV420, UYVY, YUYV, YYY, PACKED_YUV444, NV12, NV21, RGB32, RGB24, RGB16

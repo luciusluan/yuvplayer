@@ -135,6 +135,9 @@ CyuvplayerDlg::CyuvplayerDlg(CWnd* pParent /*=NULL*/)
 	wsprintf(filename, L"%s", L"YUV player");
 
 	OpenGLView = new COpenGLView;
+
+	CCfg::parse(AfxGetApp()->m_lpCmdLine);
+
 }
 
 void CyuvplayerDlg::DoDataExchange(CDataExchange* pDX)
@@ -209,7 +212,16 @@ BOOL CyuvplayerDlg::OnInitDialog()
 
 	customDlg = new CSizeDialog;
 
-	Resize( DEFAULT_WIDTH, DEFAULT_HEIGHT );
+	if(CCfg::getInstance() != nullptr) {
+		m_color = (color_format)CCfg::getInstance()->color;
+		ratio = CCfg::getInstance()->zoom;
+		Resize(CCfg::getInstance()->width, CCfg::getInstance()->height );
+		
+	}
+	else {
+		Resize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+
+	}
 
 	if( __argc == 2 )	
 		FileOpen( __targv[1] );

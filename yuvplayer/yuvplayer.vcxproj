@@ -113,6 +113,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cfg.cpp" />
     <ClCompile Include="GoDialog.cpp" />
     <ClCompile Include="OpenGLView.cpp" />
     <ClCompile Include="SizeDialog.cpp" />
@@ -124,6 +125,7 @@
     <ClCompile Include="yuvplayerDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cfg.h" />
     <ClInclude Include="GoDialog.h" />
     <ClInclude Include="OpenGLView.h" />
     <ClInclude Include="Resource.h" />
